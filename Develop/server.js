@@ -1,12 +1,20 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const PORT = process.env.PORT || 3000
 
+// Middleware for parsing JSON and urlencoded form data, this needs to go in all the time for express to work
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', api);
+
+app.use(express.static('public'));
+
 // returning the index.html file
-app.get('/', (req, res)) => {
+app.get('/', (req, res) => 
     res.sendFile(path.join(__dirname, '/public/index.html'))
-};
+);
 
 // making sure get /notes returns notes.html file
 app.get('/notes', (req, res) =>
