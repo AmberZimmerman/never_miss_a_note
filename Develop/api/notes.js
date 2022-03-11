@@ -1,6 +1,6 @@
 const notesApi = require('express').Router();
 // require file that will help read and append files
-const { readAndAppend } = require('./helpers/fsUtils/')
+const { readAndAppend } = require('../helpers/fsUtils')
 const uuid = require('../helpers/uuid');
 
 // Get route for retrieving all the notes
@@ -9,7 +9,7 @@ notesApi.get('/', (req, res) =>
     );
 
 // Post route for submitting notes
-notesApi.post('/'. (req, res) => {
+notesApi.post('/', (req, res) => {
     // need to destructure items in req.body
     const { title, text } = req.body;
 
@@ -19,7 +19,7 @@ notesApi.post('/'. (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuid(),
+            id: uuid(),
         };
 
         // read and append new note to the json object
@@ -27,7 +27,7 @@ notesApi.post('/'. (req, res) => {
 
         const response = {
         status: 'success',
-        body: newNote;
+        body: newNote,
         }
 
         res.json(response);

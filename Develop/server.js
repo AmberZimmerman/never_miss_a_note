@@ -1,4 +1,5 @@
 const express = require('express');
+const api = require('./api/index.js');
 const app = express();
 const path = require('path');
 
