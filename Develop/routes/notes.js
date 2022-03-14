@@ -8,9 +8,14 @@ notesApi.get('/', (req, res) =>
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
     );
 
-notesApi.delete(':id/', (req, res) => {
+notesApi.delete('/:id', (req, res) => {
     let noteId = req.params.id;
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+    readFromFile('./db/db.json').then((data) => JSON.parse(data)).then((JSON) => {
+        let noteResult = JSON.filter((note) => note.id !== noteId)
+        writeToFile('./db/db.json', noteResult);
+        res.json('delete')
+    })
+
 })
 
 // Post route for submitting notes
