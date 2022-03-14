@@ -1,12 +1,17 @@
 const notesApi = require('express').Router();
 // require file that will help read and append files
-const { readAndAppend } = require('../helpers/fsUtils')
+const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils')
 const uuid = require('../helpers/uuid');
 
 // Get route for retrieving all the notes
 notesApi.get('/', (req, res) =>
-    readFromFile('./db/feedback.json').then((data) => res.json(JSON.parse(data)))
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
     );
+
+notesApi.delete(':id/', (req, res) => {
+    let noteId = req.params.id;
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+})
 
 // Post route for submitting notes
 notesApi.post('/', (req, res) => {

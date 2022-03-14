@@ -12,14 +12,14 @@ app.use('/api', api);
 
 app.use(express.static('public'));
 
-// returning the index.html file
-app.get('/', (req, res) => 
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-);
-
 // making sure get /notes returns notes.html file
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
+// returning the index.html file
+app.get('/*', (req, res) => 
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 app.listen(PORT, () =>
