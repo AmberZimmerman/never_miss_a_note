@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
+"scripts": {
     "start": "node server.js"
   },
+
+
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -13,4 +15,5 @@
     "inquirer": "^8.2.1",
     "node": "^17.7.1"
   }
+
 }
