@@ -22,4 +22,5 @@ Copy the code SSH keys from this repo and then clone it in terminal. Open the fi
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/AmberZimmerman) 
 ### Screenshot:
-![My Image](Project screenshot not available for this project) 
+![My Image](./assets/notess1.png) 
+![My Image](./assets/notess2.png) 
