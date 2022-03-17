@@ -22,5 +22,5 @@ Copy the code SSH keys from this repo and then clone it in terminal. Open the fi
 ### Questions:
 If you have any questions contact me on [GitHub](https://github.com/AmberZimmerman) 
 ### Screenshot:
-![Screenshot of index which is a note taking app title with start button](./Develop/assets/notess1.png) 
-![Screenshot of notetaking functionality](./Develop/assets/notess2.png)
+![Screenshot of index which is a note taking app title with start button](./assets/notess1.png) 
+![Screenshot of notetaking functionality](./assets/notess2.png)
