@@ -23,7 +23,7 @@ https://never-miss-a-note.herokuapp.com/
 
 ### Description of the project:
 
-This app allows a user to write and save notes. Begin by selecting the new note and then typing a title then a description below. Once finished the user can click the floppy disk to save the note. Saved notes will automatically display in the left sidebar. If the user clicks the trashcan next to the note, the note will delete. If the user clicks the plus sign in the top right, the user will be presented with the new note template.
+This app allows a user to write, save, and delete notes. Begin by selecting the new note and then typing a title then a description below. Once finished the user can click the floppy disk to save the note. Saved notes will automatically display in the left sidebar. If the user clicks the trashcan next to the note, the note will delete. If the user clicks the plus sign in the top right, the user will be presented with the new note template.
 
 ### Installation:
 
